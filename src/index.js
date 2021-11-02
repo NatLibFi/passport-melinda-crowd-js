@@ -60,7 +60,7 @@ export function generatePassportMiddlewares({crowd, localUsers}) {
       useCache: crowd.useCache, fetchGroupMembership: crowd.fetchGroupMembership
     }));
 
-    logger.log('info', 'Enabling Crowd passport strategies');
+    logger.info('Enabling Crowd passport strategies');
 
     return {
       credentials: passport.authenticate('atlassian-crowd-bearer-credentials', {session: false}),
@@ -75,7 +75,7 @@ export function generatePassportMiddlewares({crowd, localUsers}) {
     passport.use(new BasicStrategy(localBasicCallback));
     passport.use(new BearerStrategy(localBearerCallback));
 
-    logger.log('info', 'Enabling local passport strategies');
+    logger.info('Enabling local passport strategies');
 
     return {
       credentials: passport.authenticate('basic', {session: false}),
