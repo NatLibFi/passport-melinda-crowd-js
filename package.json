@@ -32,24 +32,24 @@
 		"watch:test": "cross-env DEBUG=1 NODE_ENV=test nodemon -w src -w test-fixtures --exec 'npm run test:dev'"
 	},
 	"dependencies": {
-		"@natlibfi/melinda-backend-commons": "^2.0.5",
-		"@natlibfi/melinda-commons": "^12.0.0",
+		"@natlibfi/melinda-backend-commons": "^2.1.0",
+		"@natlibfi/melinda-commons": "^13.0.2",
 		"@natlibfi/passport-atlassian-crowd": "^2.0.3",
-		"passport": ">=0.5.0 <1.0.0",
+		"passport": ">=0.6.0 <1.0.0",
 		"passport-http": ">=0.3.0 <1.0.0",
 		"passport-http-bearer": "^1.0.1",
-		"uuid": "^8.3.2"
+		"uuid": "^9.0.0"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.16.0",
-		"@babel/core": "^7.16.0",
-		"@babel/eslint-parser": "^7.16.0",
-		"@babel/node": "^7.16.0",
-		"@babel/preset-env": "^7.16.0",
-		"@babel/register": "^7.16.0",
-		"@natlibfi/eslint-config-melinda-backend": "^1.1.1",
-		"cross-env": "^7.0.2",
-		"eslint": "^7.32.0"
+		"@babel/cli": "^7.21.0",
+		"@babel/core": "^7.21.0",
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/node": "^7.20.7",
+		"@babel/preset-env": "^7.20.2",
+		"@babel/register": "^7.21.0",
+		"@natlibfi/eslint-config-melinda-backend": "^2.0.2",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.35.0"
 	},
 	"eslintConfig": {
 		"extends": "@natlibfi/melinda-backend"
