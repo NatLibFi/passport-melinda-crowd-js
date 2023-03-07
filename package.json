@@ -34,7 +34,7 @@
 	"dependencies": {
 		"@natlibfi/melinda-backend-commons": "^2.1.0",
 		"@natlibfi/melinda-commons": "^13.0.2",
-		"@natlibfi/passport-atlassian-crowd": "^2.0.3",
+		"@natlibfi/passport-atlassian-crowd": "^2.0.4-alpha.1",
 		"passport": ">=0.6.0 <1.0.0",
 		"passport-http": ">=0.3.0 <1.0.0",
 		"passport-http-bearer": "^1.0.1",
