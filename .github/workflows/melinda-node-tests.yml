@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x, 19.x]
+        node-version: [16.x, 18.x, 20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -23,7 +23,6 @@ jobs:
         cache: 'npm'
       env:
         NPM_CONFIG_IGNORE_SCRIPTS: true
-    - run: npm update
     - run: npm audit --package-lock-only --production --audit-level=high
     - run: npm ci
     - run: npm test
