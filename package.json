@@ -24,12 +24,12 @@
 	},
 	"scripts": {
 		"prepare": "npm run build",
-		"lint": "eslint src",
-		"lint:dev": "eslint --fix src",
+		"lint": "eslint ./src",
+		"lint:dev": "eslint --fix ./src",
 		"test": "npm run lint",
 		"test:dev": "npm run lint:dev",
 		"build": "babel src --source-maps --copy-files --delete-dir-on-start --out-dir=dist",
-		"watch:test": "cross-env DEBUG=1 NODE_ENV=test nodemon -w src -w test-fixtures --exec 'npm run test:dev'"
+		"watch:test": "cross-env DEBUG=@natlibfi/* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
 		"@natlibfi/melinda-backend-commons": "^2.2.4",
@@ -48,7 +48,8 @@
 		"@babel/register": "^7.22.15",
 		"@natlibfi/eslint-config-melinda-backend": "^3.0.3",
 		"cross-env": "^7.0.3",
-		"eslint": "^8.56.0"
+		"eslint": "^8.56.0",
+		"nodemon": "^3.0.2"
 	},
 	"eslintConfig": {
 		"extends": "@natlibfi/melinda-backend"
@@ -62,5 +63,12 @@
 				}
 			]
 		]
+	},
+	"nodemonConfig": {
+	  "exec": "npm run test:dev",
+	  "watch": [
+		"src/*",
+		"test-fixtures/*"
+	  ]
 	}
 }
