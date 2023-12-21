@@ -14,7 +14,7 @@
 		"url": "git@github.com:natlibfi/passport-melinda-crowd-js.git"
 	},
 	"license": "LGPL-3.0+",
-	"version": "3.0.2",
+	"version": "3.0.3-alpha.1",
 	"main": "./dist/index.js",
 	"engines": {
 		"node": ">=18"
@@ -65,10 +65,10 @@
 		]
 	},
 	"nodemonConfig": {
-	  "exec": "npm run test:dev",
-	  "watch": [
-		"src/*",
-		"test-fixtures/*"
-	  ]
+		"exec": "npm run test:dev",
+		"watch": [
+			"src/*",
+			"test-fixtures/*"
+		]
 	}
 }
