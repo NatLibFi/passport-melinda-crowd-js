@@ -14,7 +14,7 @@
 		"url": "git@github.com:natlibfi/passport-melinda-crowd-js.git"
 	},
 	"license": "LGPL-3.0+",
-	"version": "3.0.2",
+	"version": "3.0.3-alpha.1",
 	"main": "./dist/index.js",
 	"engines": {
 		"node": ">=18"
@@ -24,31 +24,32 @@
 	},
 	"scripts": {
 		"prepare": "npm run build",
-		"lint": "eslint src",
-		"lint:dev": "eslint --fix src",
+		"lint": "eslint ./src",
+		"lint:dev": "eslint --fix ./src",
 		"test": "npm run lint",
 		"test:dev": "npm run lint:dev",
 		"build": "babel src --source-maps --copy-files --delete-dir-on-start --out-dir=dist",
-		"watch:test": "cross-env DEBUG=1 NODE_ENV=test nodemon -w src -w test-fixtures --exec 'npm run test:dev'"
+		"watch:test": "cross-env DEBUG=@natlibfi/* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
-		"@natlibfi/melinda-backend-commons": "^2.2.1",
-		"@natlibfi/melinda-commons": "^13.0.6",
-		"@natlibfi/passport-atlassian-crowd": "^3.0.0",
+		"@natlibfi/melinda-backend-commons": "^2.2.4",
+		"@natlibfi/melinda-commons": "^13.0.9",
+		"@natlibfi/passport-atlassian-crowd": "^3.0.1",
 		"passport": "^0.6.0",
 		"passport-http": "^0.3.0",
 		"passport-http-bearer": "^1.0.1",
 		"uuid": "^9.0.1"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.22.15",
-		"@babel/core": "^7.22.20",
+		"@babel/cli": "^7.23.4",
+		"@babel/core": "^7.23.6",
 		"@babel/node": "^7.22.19",
-		"@babel/preset-env": "^7.22.20",
+		"@babel/preset-env": "^7.23.6",
 		"@babel/register": "^7.22.15",
-		"@natlibfi/eslint-config-melinda-backend": "^3.0.2",
+		"@natlibfi/eslint-config-melinda-backend": "^3.0.3",
 		"cross-env": "^7.0.3",
-		"eslint": "^8.49.0"
+		"eslint": "^8.56.0",
+		"nodemon": "^3.0.2"
 	},
 	"eslintConfig": {
 		"extends": "@natlibfi/melinda-backend"
@@ -61,6 +62,13 @@
 					"targets": "maintained node versions"
 				}
 			]
+		]
+	},
+	"nodemonConfig": {
+		"exec": "npm run test:dev",
+		"watch": [
+			"src/*",
+			"test-fixtures/*"
 		]
 	}
 }
