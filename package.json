@@ -32,8 +32,8 @@
 		"watch:test": "cross-env DEBUG=@natlibfi/* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
-		"@natlibfi/melinda-backend-commons": "^2.2.5",
-		"@natlibfi/melinda-commons": "^13.0.11",
+		"@natlibfi/melinda-backend-commons": "^2.2.6",
+		"@natlibfi/melinda-commons": "^13.0.13",
 		"@natlibfi/passport-atlassian-crowd": "^3.0.1",
 		"passport": "^0.7.0",
 		"passport-http": "^0.3.0",
@@ -41,15 +41,15 @@
 		"uuid": "^9.0.1"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.23.4",
-		"@babel/core": "^7.23.7",
-		"@babel/node": "^7.22.19",
-		"@babel/preset-env": "^7.23.8",
+		"@babel/cli": "^7.24.5",
+		"@babel/core": "^7.24.5",
+		"@babel/node": "^7.23.9",
+		"@babel/preset-env": "^7.24.5",
 		"@babel/register": "^7.23.7",
-		"@natlibfi/eslint-config-melinda-backend": "^3.0.3",
+		"@natlibfi/eslint-config-melinda-backend": "^3.0.4",
 		"cross-env": "^7.0.3",
-		"eslint": "^8.56.0",
-		"nodemon": "^3.0.2"
+		"eslint": "^8.57.0",
+		"nodemon": "^3.1.0"
 	},
 	"eslintConfig": {
 		"extends": "@natlibfi/melinda-backend"
