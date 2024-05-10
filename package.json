@@ -13,7 +13,7 @@
 		"type": "git",
 		"url": "git@github.com:natlibfi/passport-melinda-crowd-js.git"
 	},
-	"license": "LGPL-3.0+",
+	"license": "MIT",
 	"version": "3.0.4",
 	"main": "./dist/index.js",
 	"engines": {
