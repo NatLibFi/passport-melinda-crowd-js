@@ -32,7 +32,7 @@
 		"watch:test": "cross-env DEBUG=@natlibfi/* NODE_ENV=test nodemon"
 	},
 	"dependencies": {
-		"@natlibfi/melinda-backend-commons": "^2.3.0",
+		"@natlibfi/melinda-backend-commons": "^2.3.1",
 		"@natlibfi/melinda-commons": "^13.0.15",
 		"@natlibfi/passport-atlassian-crowd": "^3.0.1",
 		"passport": "^0.7.0",
